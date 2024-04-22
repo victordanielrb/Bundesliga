@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <img src="../static/img/bundesliga.png" alt="Bootstrap" width="150" height="96">
+         
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+            
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Neste Ano</a>
+              </li>
+             
+              <li class="nav-item">
+                <a class="nav-link" href="/lastchamps">Ultimos Anos</a>
+              </li>
+             
+            </ul>
+          </div>
+        </div>
+      </nav>
+        
+     
+        <span class="api">
+            <span class="apitext">
+                <div id="txt">
+                    <form class="form" action = "/lastchamps" method="post">
+                        Digite o ano que deseja buscar:
+                        <input type="text" name='ano'/>
+                        <button type="submit">Enviar</button>
+                    </form>
+            
+                <h1>Temporada Passadas (2000-2024)</h1>
+               <p>
+                23/24	Bayer 04 Leverkusen	Xabi Alonso<br>
+                22/23	FC Bayern Munique	Thomas Tuchel<br>
+                21/22	FC Bayern Munique	Julian Nagelsmann<br>
+                20/21	FC Bayern Munique	Hansi Flick<br>
+                19/20	FC Bayern Munique	Hansi Flick<br>
+                18/19	FC Bayern Munique	Niko Kovac<br>
+                17/18	FC Bayern Munique	Jupp Heynckes<br>
+                16/17   FC Bayern Munique	Carlo Ancelotti<br>
+                15/16	FC Bayern Munique	Pep Guardiola<br>
+                14/15	FC Bayern Munique	Pep Guardiola<br>
+                13/14	FC Bayern Munique	Pep Guardiola<br>
+                12/13	FC Bayern Munique	Jupp Heynckes<br>
+                11/12	Borussia Dortmund	Jürgen Klopp<br>
+                10/11	Borussia Dortmund	Jürgen Klopp<br>
+                09/10	FC Bayern Munique	Louis van Gaal<br>
+                08/09	VfL Wolfsburg	    Felix Magath<br>
+                07/08	FC Bayern Munique	Ottmar Hitzfeld<br>
+                06/07	VfB Stuttgart	        Armin Veh<br>
+                05/06	FC Bayern Munique	Felix Magath<br>
+                04/05	FC Bayern Munique	Felix Magath<br>
+                03/04	Werder Bremen	    Thomas Schaaf<br>
+                02/03	FC Bayern Munique	Ottmar Hitzfeld<br>
+                01/02	Borussia Dortmund	Matthias Sammer<br>
+                00/01	FC Bayern Munique   Ottmar Hitzfeld<br>
+            </p>
+                </div>
+
+
+            </span>
+
+            <div class="api2" id="wg-api-football-standings"
+            data-host="v3.football.api-sports.io"
+            data-key="f458adbf049b1c1f6c1d7ecc257399b1"
+            data-league="78"
+            data-team=""
+            data-season="{{ano}}"
+            data-theme="gray"
+            data-show-errors="false"
+            data-show-logos="true"
+            class="wg_loader">
+            </div>
+        </span>
+    <script
+        type="module"
+        src="https://widgets.api-sports.io/2.0.3/widgets.js">
+    </script>
+</body>
+</html>
