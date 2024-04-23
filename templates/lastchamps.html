@@ -11,35 +11,24 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <img src="../static/img/bundesliga.png" alt="Bootstrap" width="150" height="96">
-         
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+  <div class="fundo">
+    <div class="navbar">
+        <img class="navimg" src="../static/img/bundesliga_pos.svg" width="200px" height="100px" alt="">
+        <span class="navtxt">
+            <a class="navrotulo"  href="/">Neste Ano</a>
+            <a class="navrotulo" href="/lastchamps">Ultimos anos</a>
             
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Neste Ano</a>
-              </li>
-             
-              <li class="nav-item">
-                <a class="nav-link" href="/lastchamps">Ultimos Anos</a>
-              </li>
-             
-            </ul>
-          </div>
-        </div>
-      </nav>
-        
+        </span>
+    </div>
+    <div class="alert alert-secondary" role="alert">
+        Você consegue ver a tabela da bundesliga nos anos 2010-2024, dê uma olhada!
+      </div>
      
         <span class="api">
             <span class="apitext">
                 <div id="txt">
                     <form class="form" action = "/lastchamps" method="post">
-                        Digite o ano que deseja buscar:
+                        Digite o ano que deseja buscar (2010-2024):
                         <input type="text" name='ano'/>
                         <button type="submit">Enviar</button>
                     </form>
