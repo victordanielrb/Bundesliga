@@ -5,17 +5,18 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():   
-    ano=0
+    ano=2023
     return render_template("index.html",ano=ano)
 
 @app.route('/lastchamps', methods=["POST","GET"])
 def lastchamps():   
+    ano=2023
     if request.method == "POST":
         ano = request.form.get('ano', '')  # Obtém o valor do campo 'ano' do formulário
     else:
-        ano = request.args.get('ano', '')  # Se a solicitação for GET, obtém o valor de 'ano' dos parâmetros da URL
+        ano=2023
 
-    return render_template("lastchamps.html", ano=ano)
+    return render_template("lastchamps.html",ano=ano)
 
     
 
