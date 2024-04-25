@@ -19,24 +19,32 @@
         <span class="navtxt">
             <a class="navrotulo"  href="/">Neste Ano</a>
             <a class="navrotulo" href="/lastchamps">Ultimos anos</a>
-            
         </span>
-    </div>
+    </div>  
+    
     <div class="alert alert-primary" role="alert">
-        Você consegue ver a tabela da bundesliga nos anos 2010-2024, dê uma olhada!
-      </div>
-     
+        Você consegue ver a tabela da bundesliga nos anos 2010-2024, dê uma olhada!  
+        <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" style="margin-left:30px;margin:10px;" aria-expanded="false" aria-controls="collapseExample">
+            Curiosidade
+          </button>
+        </p>
+        <div class="collapse" id="collapseExample">
+          <div class="card card-body">
+            A Bundesliga é a competição nacional mais recente dentre as principais ligas da Europa. O Campeonato Alemão existe desde 1903, mas os primeiros 60 anos do torneio tiveram um formato distinto, com uma fase final que reunia os melhores times dos certames regionais.
+          </div>
+    </div>
+   
+    </div>
         <span class="api">
             <span class="apitext">
                 <div id="txt">
-                    <form class="form" action = "/lastchamps" method="post">
-                        Digite o ano que deseja buscar (2010-2024):
-                        <input type="text" name='ano' value="2023">
-                       
-                        <button type="submit">Enviar</button>
-                    </form>
-            
-                <h1>Temporada Passadas (2000-2010)</h1>
+                    
+                    <form class="d-flex form"  action = "/lastchamps" method="post" role="search">
+                        <input class="form-control me-2"type="text" name='ano' value="" placeholder="oi..." aria-label="Procurar">
+                        <button class="btn btn-outline-success" type="submit">Procurar</button>
+                      </form>
+                    
+                <h1>Temporadas Passadas (2000-2010)</h1>
               <p>
                 10/11	Borussia Dortmund	Jürgen Klopp<br>
                 09/10	FC Bayern Munique	Louis van Gaal<br>
@@ -49,6 +57,8 @@
                 02/03	FC Bayern Munique	Ottmar Hitzfeld<br>
                 01/02	Borussia Dortmund	Matthias Sammer<br>
                 00/01	FC Bayern Munique   Ottmar Hitzfeld<br>
+                
+                </div>
             </p>
                 </div>
 
