@@ -18,6 +18,9 @@ def lastchamps():
 
     return render_template("lastchamps.html",ano=ano)
 
+@app.route('/news')
+def news():
+    return render_template("news.html")
     
 
 if __name__ == '__main__':

@@ -12,8 +12,8 @@ html, body {
 
  display: flex;
  flex-wrap: wrap;
- justify-content: space-between;
-    align-items: right;
+ justify-content: center;
+    align-items: center;
 
 }
 .api2{
@@ -50,6 +50,11 @@ h1{
 }
 .form{
 margin: 10px;
+
+}
+.form{
+    display: flex;
+    flex-wrap: wrap;
 
 }
 #navbarNav{
@@ -114,102 +119,7 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 font-size: 6%;
 }
 
-@media only screen and (max-width: 375px) and (max-height: 750px) {
-    img{
-     width: 110px;
-    }
-    .navrotulo{
- 
-     font-size: 100%;
-    }
-    .apitext{
-     height: 70%;
-     margin-left: 20%;
-     }
-    .navbar{
-     width: 100%;
-     }
-     .api2{ 
-     margin-left: 10%;
-     margin-right: 10%;
-     }
-     .carrocel{
-     margin-right:2%;
-     }
-     .accordion{
-     width: 60%;
-     }
-     .accord{
-     width: 80%;
-     }
-    .navtxt{
-     float: right;
-     margin-right: 6%;
-     margin-left: 6%;
-     margin-top: 8%;
-     margin-bottom: 8%;
-     }
-     .navimg{
-         margin: 0px;
- 
-         padding-left: 5px;
-     }
-     .txtacordeon{
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: 6%;
-        }
-   }
-   @media only screen and (max-width: 700px) and (max-height: 700px) {
-     img{
-      width: 160px;
-      padding-left: 10px;
-     }
-     .carrocel{
-         margin-right:10px;
-     }
-     .navbar{
-         width: 100%;
-     }
-     .navimg{
-         margin: 0px;
- 
-         padding-left: 0px;
-     }
- 
-     .accordion{
-         width: 60%;
-     }
-     
-     .apitext{
-         height: 70%;
-         margin-left: 20%;
-     }
-     .txtacordeon{
-         font-size: 9px;
-         text-align: justify
-     }
-     .accord{
-         width: 95%;
-     }
-     .navrotulo{
-  
-      font-size: 80%;
-     }
-     h1{
-         font-size: 20px;
-     }
-     .navtxt{
-      float: right;
-      margin-right: 3%;
-      margin-top: 4%;
-      margin-bottom: 4%;
-      }
-      .api2{
-        margin-left: 5%;
-     margin-right: 5%;
-      }
-    }
-   @media only screen and (max-width: 1600px) and (max-height: 1600px) {
+   @media only screen and (max-width: 1000px) and (max-height: 1000px) {
     img{
      width: 160px;
      padding-left: 10px;
@@ -219,7 +129,7 @@ font-size: 6%;
     }
     .navimg{
         margin: 0px;
-
+        width: 20%;
         padding-left: 0px;
     }
     .accordion{
@@ -246,7 +156,7 @@ font-size: 6%;
     }
     .navrotulo{
  
-     font-size: 100%;
+     font-size: 90%;
     }
     h1{
         font-size: 20px;

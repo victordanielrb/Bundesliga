@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"href="../static/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+</head>
+<body class="bg-primary">
+    <div class="navbar">
+        <img class="navimg" src="../static/img/bundesliga_pos.svg" width="200px" height="100px" alt="">
+        <span class="navtxt">
+            <a class="navrotulo"  href="/">Neste Ano</a>
+            <a class="navrotulo" href="/lastchamps">Ultimos anos</a>
+            <a class="navrotulo" href="/news">Newsletter</a>
+            
+        </span>
+    </div>
+    <div class="form">
+        <form class="d-flex form"  action = "/" method="post" role="search">
+
+            <label for="nome">Digite seu nome:</label>
+            <input class="form-control me-2"type="text" name='nome' value="" placeholder="nome" aria-label="Procurar">
+            <label for="email">Digite seu email:</label>
+            <input class="form-control me-2"type="email" name='email' value="" placeholder="email" aria-label="Procurar">
+            <button style="margin: 1%;" class="btn btn-outline-success" type="submit">Enviar</button>
+          </form>
+    </div>
+</body>
+</html>
