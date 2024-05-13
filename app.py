@@ -1,7 +1,21 @@
-from flask import Flask, render_template, request
-
+from flask import Flask, render_template, request, url_for,redirect
+import time
+from flask_mysqldb import MySQL
+from MySQLdb import _mysql
 
 app = Flask(__name__)
+
+# Configurações do MySQL
+app.config['MYSQL_HOST'] = '3.219.171.0'
+app.config['MYSQL_PORT'] = 3306
+app.config['MYSQL_USER'] = 'root'
+app.config['MYSQL_PASSWORD'] = 'root'
+app.config['MYSQL_DB'] = 'corinthians'
+app.config['MYSQL_CURSORCLASS'] = 'DictCursor'  # Isso é opcional, mas torna o retorno do MySQL em um dicionário, o que é mais conveniente para trabalhar com dados
+
+mysql = MySQL(app)
+
+
 
 @app.route('/')
 def index():   
@@ -20,8 +34,27 @@ def lastchamps():
 
 @app.route('/news')
 def news():
+    
     return render_template("news.html")
     
+
+@app.route('/processar', methods=['POST'])
+def processar():
+    if request.method == 'POST':
+
+        nome = request.form['nome']
+        email = request.form['email']
+        
+              # Conectar ao banco de dados e inserir os dados
+                ##ERRO AQUI## -- > **cur = mysql.connection.cursor()**
+        cur = mysql.connection.cursor()
+        cur.execute("INSERT INTO newsletter (nome, email) VALUES (%s, %s)", (nome, email))
+        mysql.connection.commit()
+        cur.close()
+        
+       
+        return "deu certo",time.sleep(5),redirect(url_for('news'))
+      
 
 if __name__ == '__main__':
     app.run(debug=True)
