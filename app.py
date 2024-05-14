@@ -6,7 +6,7 @@ from MySQLdb import _mysql
 app = Flask(__name__)
 
 # Configurações do MySQL
-app.config['MYSQL_HOST'] = '3.219.171.0'
+app.config['MYSQL_HOST'] = 'db'
 app.config['MYSQL_PORT'] = 3306
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'root'
@@ -48,12 +48,13 @@ def processar():
               # Conectar ao banco de dados e inserir os dados
                 ##ERRO AQUI## -- > **cur = mysql.connection.cursor()**
         cur = mysql.connection.cursor()
-        cur.execute("INSERT INTO newsletter (nome, email) VALUES (%s, %s)", (nome, email))
+        cur.execute("INSERT INTO newsletter (name, email) VALUES (%s, %s)", (nome, email))
         mysql.connection.commit()
         cur.close()
         
        
-        return "deu certo",time.sleep(5),redirect(url_for('news'))
+        
+        return redirect(url_for('news'))
       
 
 if __name__ == '__main__':
