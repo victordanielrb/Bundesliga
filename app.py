@@ -2,16 +2,14 @@ from flask import Flask, render_template, request, url_for,redirect
 import time
 from flask_mysqldb import MySQL
 from MySQLdb import _mysql
+import mysql.connector
 
 app = Flask(__name__)
 
 # Configurações do MySQL
-app.config['MYSQL_HOST'] = 'db'
-app.config['MYSQL_PORT'] = 3306
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'root'
-app.config['MYSQL_DB'] = 'corinthians'
-app.config['MYSQL_CURSORCLASS'] = 'DictCursor'  # Isso é opcional, mas torna o retorno do MySQL em um dicionário, o que é mais conveniente para trabalhar com dados
+conexao = mysql.connector.connect(
+    host='3.219.171.0',user='victor',password='victor',database='corinthians'
+) # Isso é opcional, mas torna o retorno do MySQL em um dicionário, o que é mais conveniente para trabalhar com dados
 
 mysql = MySQL(app)
 
@@ -44,14 +42,11 @@ def processar():
 
         nome = request.form['nome']
         email = request.form['email']
-        
-              # Conectar ao banco de dados e inserir os dados
-                ##ERRO AQUI## -- > **cur = mysql.connection.cursor()**
-        cur = mysql.connection.cursor()
-        cur.execute("INSERT INTO newsletter (name, email) VALUES (%s, %s)", (nome, email))
-        mysql.connection.commit()
-        cur.close()
-        
+        cursor=conexao.cursor()
+        cursor.execute("INSERT INTO newsletter (name, email) VALUES (%s, %s)",(nome,email))
+        conexao.commit()
+        cursor.close()
+        conexao.close()
        
         
         return redirect(url_for('news'))
